@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geovisualization Final Project</title>
+    <link rel="stylesheet" href="./Geovisualization Final Project_files/leaflet.css">
+    <style> html { height:100%;}
+        body {
+            height:100%;
+            padding: 0;
+            margin: 0;
+        }
+    
+        #map {
+            width: 100%;
+            margin: 0 auto;
+            height: 95%;
+        } 
+        .info {
+            z-index: 1000;
+            position: absolute;
+            right: 40%;
+            top: 5%;
+            padding: 6px 8px;
+            font: 14px Arial, Helvetica, sans-serif;
+            text-align: center;
+            background: white;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .info h1 {
+            font-size: 16px;
+            margin: 0 0 5px;
+            color: #777777;
+        }
+
+
+        .legend {
+            line-height: 18px;
+            color: #333333;
+            font-family: 'Open Sans', Helvetica, sans-serif;
+            padding: 6px 8px;
+            background: white;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+
+        .legend i {
+            width: 28px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+
+
+        .legend p {
+            font-size: 12px;
+            line-height: 18px;
+            margin: 0;
+        }
+        </style>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1048.0" data-gr-ext-installed=""> 
+    <script src="./Geovisualization Final Project_files/leaflet.js.download"></script>
+    <script src="./Geovisualization Final Project_files/jquery.min.js.download"></script>
+    <div id="map" style="width: 1000px; height: 600px; position: relative;" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 13; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="./Geovisualization Final Project_files/559" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(450px, 36px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/559(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(450px, 292px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/558" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(194px, 36px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/560" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(706px, 36px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/558(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(194px, 292px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/560(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(706px, 292px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/559(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(450px, -220px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/559(3)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(450px, 548px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/558(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(194px, -220px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/560(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(706px, -220px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/558(3)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(194px, 548px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/560(3)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(706px, 548px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/557" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-62px, 36px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/561" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(962px, 36px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/557(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-62px, 292px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/561(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(962px, 292px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/557(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-62px, -220px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/561(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(962px, -220px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/557(3)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-62px, 548px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Geovisualization Final Project_files/561(3)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(962px, 548px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"><img src="./Geovisualization Final Project_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(526px, 312px, 0px);"></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="1200" height="720" viewBox="-100 -60 1200 720" style="transform: translate3d(-100px, -60px, 0px);"><g><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M724 116L724 135L738 136L739 149L733 154L690 176L668 184L668 179L673 179L673 177L663 169L669 164L672 165L674 163L677 166L692 151L691 150L701 140L705 138L716 125L716 123L718 123L724 115z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#c7e9c0" fill-opacity="0.9" fill-rule="evenodd" d="M668 184L690 176L733 154L739 149L739 155L736 157L736 160L743 163L744 166L738 173L713 194L694 221L665 221L664 189L668 185z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M718 189L720 189L729 198L733 200L732 204L734 208L739 210L749 221L733 221L729 218L729 221L701 221L698 215L717 190z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#c7e9c0" fill-opacity="0.9" fill-rule="evenodd" d="M664 206L664 250L654 250L654 278L624 278L623 275L625 271L619 266L619 264L613 259L611 255L607 245L608 237L603 227L595 226L600 217L604 215L611 223L612 230L614 230L647 210L646 209L665 199L664 204z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#a1d99b" fill-opacity="0.9" fill-rule="evenodd" d="M600 228L596 230L597 231L603 227L604 228L608 237L607 244L609 251L613 259L619 264L620 267L576 274L576 247L581 242L578 239L580 238L583 241L585 240L586 235L587 238L599 227z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#c7e9c0" fill-opacity="0.9" fill-rule="evenodd" d="M576 246L576 299L567 302L550 304L545 282L541 276L542 273L554 265L558 261L559 256L564 257L567 255L563 254L568 251L570 253L570 249L575 248L575 246z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#c7e9c0" fill-opacity="0.9" fill-rule="evenodd" d="M550 304L549 308L536 318L528 321L524 318L518 322L520 320L519 317L509 319L499 311L494 309L490 302L496 297L499 300L500 299L498 296L499 295L501 298L502 297L500 294L507 289L509 292L510 291L511 294L512 291L511 289L510 290L508 288L511 286L513 290L515 288L517 291L518 288L515 282L516 280L524 276L522 273L556 247L561 253L552 259L554 265L541 275L546 286L550 304zM550 304L550 304z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#74c476" fill-opacity="0.9" fill-rule="evenodd" d="M625 271L622 278L623 287L627 293L627 298L594 297L594 301L576 300L576 274L621 267L625 271z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#c7e9c0" fill-opacity="0.9" fill-rule="evenodd" d="M664 278L664 292L658 292L654 299L654 306L647 307L647 319L649 319L649 321L645 321L639 313L634 322L629 321L629 301L626 301L627 293L624 290L622 278L664 278z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#74c476" fill-opacity="0.9" fill-rule="evenodd" d="M550 304L550 304zM594 301L594 332L598 332L598 336L576 345L566 343L561 340L558 335L558 332L553 327L541 324L536 320L536 318L548 309L550 305L556 303L581 300z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#74c476" fill-opacity="0.9" fill-rule="evenodd" d="M605 297L627 298L626 301L629 301L629 321L634 321L630 330L613 332L603 336L598 336L598 332L594 332L594 297L604 297z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#c7e9c0" fill-opacity="0.9" fill-rule="evenodd" d="M515 379L505 379L507 360L505 334L509 332L516 337L530 339L540 352L531 371L525 379L523 394L518 391L514 386L515 380zM515 380L515 379z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#c7e9c0" fill-opacity="0.9" fill-rule="evenodd" d="M489 300L494 309L499 311L509 319L519 317L520 320L518 322L524 318L528 321L535 318L539 323L551 326L555 328L558 332L563 354L559 355L561 357L561 362L559 366L564 365L568 379L567 380L561 377L558 378L551 386L553 394L533 396L533 404L535 405L533 408L523 403L524 382L540 352L530 339L516 337L514 334L509 332L501 332L497 328L501 318L497 318L496 320L489 318L487 324L489 327L484 331L470 329L465 322L466 319L476 313L482 313L481 310L489 306L487 303L488 301z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M649 319L661 323L661 333L673 335L673 364L663 365L662 362L647 362L647 334L649 328L649 319z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#a1d99b" fill-opacity="0.9" fill-rule="evenodd" d="M647 341L647 353L615 353L619 342L611 344L605 335L612 332L630 331L639 313L645 321L649 321L647 340z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#74c476" fill-opacity="0.9" fill-rule="evenodd" d="M610 341L611 344L619 342L615 352L637 353L637 357L632 361L632 364L627 364L624 362L620 363L627 365L627 368L631 371L641 372L641 379L608 380L609 377L603 374L604 361L592 360L588 347L583 345L576 347L577 344L598 336L605 335L607 338z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#c7e9c0" fill-opacity="0.9" fill-rule="evenodd" d="M576 345L576 347L582 345L588 347L592 360L604 361L603 374L609 377L608 380L612 411L616 416L629 426L629 435L620 437L603 437L603 423L598 423L600 423L599 426L586 427L586 423L578 423L577 404L573 402L573 400L568 400L568 395L553 395L551 386L555 381L561 377L567 380L568 379L564 366L559 366L559 364L561 363L561 357L559 355L562 354L559 339L566 343L575 344z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M482 357L482 392L486 393L478 399L465 403L455 411L451 408L448 409L449 415L445 415L446 412L441 412L440 410L440 402L451 402L450 381L462 370L462 363L475 357L482 357z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M462 363L462 370L417 410L412 416L411 413L414 411L414 409L413 408L408 412L405 409L405 374L419 372L431 367L447 367L462 363z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M514 380L515 379L514 386L524 397L523 404L531 407L528 410L528 414L523 413L521 411L516 412L511 419L510 418L507 420L506 415L502 415L489 407L481 405L474 400L484 396L489 386L505 385L505 379L508 380zM515 379L515 380z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M691 391L730 392L730 421L716 421L716 430L682 418L686 414L690 413L690 391z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M394 415L406 415L404 467L387 467L389 461L369 460L361 464L326 464L324 467L348 429L375 427L385 417L393 415z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M297 450L297 434L294 430L295 421L300 420L309 425L314 424L317 418L314 415L315 411L313 403L316 402L319 406L324 403L327 396L332 394L332 390L325 381L327 378L331 378L337 375L334 372L327 376L317 376L314 378L309 376L308 369L310 367L320 372L345 371L345 367L387 367L334 451L297 450z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M405 359L405 408L408 412L406 415L386 416L376 426L372 428L349 429L386 369L402 361z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M498 413L506 415L507 420L509 418L511 419L516 412L521 411L523 413L527 413L531 418L538 417L538 423L545 428L551 425L551 429L555 429L558 431L559 436L555 439L539 440L538 459L535 460L537 462L532 464L513 466L455 467L455 457L464 457L464 434L458 434L458 426L454 426L455 411L465 403L474 400L481 405L489 407L494 410z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#006d2c" fill-opacity="0.9" fill-rule="evenodd" d="M294 442L296 442L297 450L334 451L324 467L315 468L321 468L321 471L317 478L315 481L313 481L299 505L290 515L287 515L284 520L282 521L283 519L281 519L281 517L276 516L274 518L271 517L268 519L269 514L265 513L262 513L261 516L260 515L261 517L258 516L251 519L250 518L250 520L248 520L245 514L246 505L258 495L258 493L256 493L260 487L260 492L262 492L265 489L263 488L265 488L278 467L284 467L284 461L283 463L281 463L282 460L278 456L279 454L281 454L282 444L287 444L290 440L292 441z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#c7e9c0" fill-opacity="0.9" fill-rule="evenodd" d="M674 422L675 419L681 421L681 417L716 430L716 434L721 436L721 449L718 449L717 456L698 456L698 445L694 445L694 442L679 443L679 435L674 435L674 424z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#c7e9c0" fill-opacity="0.9" fill-rule="evenodd" d="M647 353L647 362L662 362L663 365L685 364L685 376L691 376L691 391L689 400L674 400L674 393L664 393L664 391L642 390L641 372L631 371L627 368L627 365L620 363L624 362L627 364L631 364L633 363L633 360L637 358L637 353L647 353z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M475 336L475 358L467 360L458 365L447 367L443 366L443 332L449 329L449 325L456 321L458 326L465 322L470 329L479 331L480 334L476 336z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#c7e9c0" fill-opacity="0.9" fill-rule="evenodd" d="M609 379L608 380L641 379L641 389L644 391L664 391L664 393L674 393L674 400L690 399L690 413L686 414L682 418L681 417L681 421L675 419L673 422L629 422L629 428L629 426L616 416L612 411L609 377z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M442 338L442 367L431 367L423 371L405 374L405 356L442 338z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#c7e9c0" fill-opacity="0.9" fill-rule="evenodd" d="M507 359L505 385L489 385L486 393L482 392L482 358L485 357L491 359L493 357L499 356L506 348L507 358z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#edf8e9" fill-opacity="0.9" fill-rule="evenodd" d="M406 325L412 325L415 328L429 330L433 332L443 332L443 338L405 356L406 325z"></path><path class="leaflet-interactive" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" fill="#c7e9c0" fill-opacity="0.9" fill-rule="evenodd" d="M501 318L497 325L497 328L500 332L505 333L506 348L499 356L493 357L492 359L484 357L476 358L475 336L480 334L480 331L484 331L489 327L487 324L489 318L496 320L497 318L499 318z"></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M703,153a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M691,189a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M718,209a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M620,241a17,17 0 1,0 34,0 a17,17 0 1,0 -34,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M590,254a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M562,279a0,0 0 1,0 0,0 a0,0 0 1,0 0,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M527,293a0,0 0 1,0 0,0 a0,0 0 1,0 0,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M575,285a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M641,295a1,1 0 1,0 2,0 a1,1 0 1,0 -2,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M558,321a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M608,315a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M520,359a0,0 0 1,0 0,0 a0,0 0 1,0 0,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M529,350a0,0 0 1,0 0,0 a0,0 0 1,0 0,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M653,345a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M624,338a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M606,359a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M560,390a28,28 0 1,0 56,0 a28,28 0 1,0 -56,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M453,386a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M423,385a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M504,399a0,0 0 1,0 0,0 a0,0 0 1,0 0,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M706,408a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M367,444a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M337,407a0,0 0 1,0 0,0 a0,0 0 1,0 0,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M383,399a1,1 0 1,0 2,0 a1,1 0 1,0 -2,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M498,437a1,1 0 1,0 2,0 a1,1 0 1,0 -2,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M288,483a0,0 0 1,0 0,0 a0,0 0 1,0 0,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M683,437a15,15 0 1,0 30,0 a15,15 0 1,0 -30,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M644,377a18,18 0 1,0 36,0 a18,18 0 1,0 -36,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M458,344a0,0 0 1,0 0,0 a0,0 0 1,0 0,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M615,404a30,30 0 1,0 60,0 a30,30 0 1,0 -60,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M424,358a1,1 0 1,0 2,0 a1,1 0 1,0 -2,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M492,371a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M419,339a0,0 0 1,0 0,0 a0,0 0 1,0 0,0 "></path><path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="lightblue" fill-opacity="0.2" fill-rule="evenodd" d="M490,341a0,0 0 1,0 0,0 a0,0 0 1,0 0,0 "></path></g></svg></div><div class="leaflet-pane leaflet-marker-pane"><img src="./Geovisualization Final Project_files/marker-icon-2x.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(526px, 312px, 0px); z-index: 312;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="http://127.0.0.1:5500/index.html#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="http://127.0.0.1:5500/index.html#" title="Zoom out" role="button" aria-label="Zoom out">-</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"><div class="leaflet-control-scale leaflet-control"><div class="leaflet-control-scale-line" style="width: 87px;">5 km</div><div class="leaflet-control-scale-line" style="width: 84px;">3 mi</div></div></div><div class="leaflet-bottom leaflet-right"><div class="legend leaflet-control"><b>Total % of Vacant Parcels</b><br>by Neighborhood<br><br><i style="background: #006d2c"></i><p>58-72</p><i style="background: #31a354"></i><p>44-58</p><i style="background: #74c476"></i><p>29-44</p><i style="background: #a1d99b"></i><p>15-29</p><i style="background: #c7e9c0"></i><p>0-15</p><hr><i style="background: #edf8e9"></i><p>No Data</p></div><div class="leaflet-control-attribution leaflet-control"><a href="http://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | Tiles © Esri — Sources: GEBCO, NOAA, CHS, OSU, UNH, CSUMB, National Geographic, DeLorme, NAVTEQ, and Esri</div></div></div></div>
+    <script>
+        var map = L.map('map', {center: [41.50468098494366, -81.70417089352395], zoom: 11});
+    	L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Sources: GEBCO, NOAA, CHS, OSU, UNH, CSUMB, National Geographic, DeLorme, NAVTEQ, and Esri',
+        maxZoom: 13}).addTo(map);
+    	map.doubleClickZoom.disable();
+
+        //Chlorapleth map, probable vacant land
+        var probablevacantLayer = null;
+        $.getJSON("NB_probablevacant.json",function(data){
+            probablevacantlayer = L.geoJson(data, {
+                style: styleFunc,
+            }).addTo(map);
+        });
+
+        function styleFunc(feature){
+            return {
+                fillColor: setColorFunc(feature.properties.Vac_den),
+                fillOpacity: 0.9,
+                weight: 1,
+                opacity: 1,
+                color: '#ffffff',
+                dashArray: '3'
+            };
+        }
+
+        function setColorFunc(density){
+            return density > 0.72 ? '#006d2c' :
+                density > 0.58 ? '#31a354' :
+                density > 0.44 ? '#74c476' :
+                density > 0.29 ? '#a1d99b' :
+                density > 0.15 ? '#c7e9c0' :
+                                 '#edf8e9';
+        };
+
+        //Proportional symbol map
+        var landbankvacantLayer = null;
+        $.getJSON("LB_vacant_latlng.json",function(data){
+            landbankvacantLayer = L.geoJson(data, {
+                pointToLayer: function(feature, latlng) {
+                    return L.circleMarker (latlng, {
+                        weight: 1,
+                        radius: Math.round(feature.properties.LBvacant_c/22),
+                        fillColor: 'lightblue'
+                    });
+                },
+                onEachFeature: function(feature, layer){
+                    layer.bindTooltip('Number of Land-Bank Owned Vacant Properties: '+feature.properties.LBvacant_c);
+                    layer.on('mouseover', function() {
+                        layer.setStyle({
+                            fillColor: 'darkgreen'
+                            });
+                        });
+                    layer.on('mouseout', function() {
+                        layer.setStyle({
+                            fillColor: 'lightblue'
+                        });
+                    });
+                }
+            }).addTo(map);
+        });
+
+       
+        // Scale Bar
+        L.control.scale({position: 'bottomleft'}).addTo(map);
+
+        // point marker, Cleveland Land Bank
+        var myDataPoint = L.marker([41.49836630655106, -81.68593168510388]).addTo(map);
+        myDataPoint.bindPopup("Cuyahoga Land Bank Office");
+        myDataPoint.bindPopup("<h3>Cuyahoga Land Bank Office</h3>");
+
+        // Legend
+        var legend = L.control({position: 'bottomright'});
+
+    // Function that runs when legend is added to map
+        legend.onAdd = function (map) {
+        var div = L.DomUtil.create('div', 'legend');            
+        div.innerHTML += '<b>Total % of Vacant Parcels</b><br />';
+        div.innerHTML += 'by Neighborhood<br />';
+        div.innerHTML += '<br>';
+        div.innerHTML += '<i style="background: #006d2c"></i><p>58-72</p>';
+        div.innerHTML += '<i style="background: #31a354"></i><p>44-58</p>';
+        div.innerHTML += '<i style="background: #74c476"></i><p>29-44</p>';
+        div.innerHTML += '<i style="background: #a1d99b"></i><p>15-29</p>';
+        div.innerHTML += '<i style="background: #c7e9c0"></i><p>0-15</p>';
+        div.innerHTML += '<hr>';
+        div.innerHTML += '<i style="background: #edf8e9"></i><p>No Data</p>';
+        
+            return div;
+        };
+
+        legend.addTo(map);
+
+    
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
